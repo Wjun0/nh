@@ -1,0 +1,262 @@
+flask.app INFO C:\Users\Administrator\Desktop\work\code\nanhu\app\resources\user\chat.py 44 hello 2020-01-13 10:38:05,820 
+2020-01-13 10:40:57,703 flask.app INFO  44 hello 
+2020-01-13 10:41:15,063 flask.app INFO  44 hello 
+2020-01-13 10:41:28,475 flask.app INFO  44 hello 
+2020-01-13 10:41:29,750 flask.app INFO  44 hello 
+2020-01-13 10:41:44,968 flask.app INFO  44 hello 
+2020-01-13 10:41:57,344 flask.app INFO  44 hello 
+2020-01-13 10:45:23,663 flask.app INFO  44 hello 
+2020-01-13 10:46:46,009 flask.app ERROR  44 hello 
+2020-01-13 10:46:59,658 flask.app ERROR  44 error 
+2020-01-13 10:47:48,243 flask.app ERROR  44 errormessage 
+2020-01-13 11:05:00,508 flask.app ERROR  44 errormessage 
+2020-01-13 11:05:09,938 flask.app ERROR  44 errormessage 
+2020-01-13 11:05:17,452 flask.app ERROR  44 errormessage 
+2020-01-13 11:05:19,805 flask.app ERROR  44 errormessage 
+2020-01-13 11:05:21,349 flask.app ERROR  44 errormessage 
+2020-01-13 11:05:22,635 flask.app ERROR  44 errormessage 
+2020-01-13 11:27:47,043 flask.app ERROR  44 errormessage 
+2020-01-13 11:27:48,193 flask.app ERROR  44 errormessage 
+2020-01-13 11:27:49,635 flask.app ERROR  44 errormessage 
+2020-01-13 11:27:50,307 flask.app ERROR  44 errormessage 
+2020-01-13 11:27:51,422 flask.app ERROR  44 errormessage 
+2020-01-13 11:30:09,643 flask.app ERROR  44 errormessage 
+2020-01-13 14:23:57,615 flask.app ERROR  44 errormessage 
+2020-01-13 14:41:26,383 flask.app ERROR  44 errormessage 
+2020-01-13 14:42:40,046 flask.app ERROR  44 errormessage 
+2020-01-13 14:42:53,503 flask.app ERROR  44 errormessage 
+2020-01-13 14:43:33,437 flask.app ERROR  44 errormessage 
+2020-01-13 14:43:36,042 flask.app ERROR  44 errormessage 
+2020-01-13 14:44:11,034 flask.app ERROR  44 errormessage 
+2020-01-13 14:44:11,809 flask.app ERROR  44 errormessage 
+2020-01-13 14:56:33,979 flask.app ERROR  1761 Exception on /test [GET] 
+Traceback (most recent call last):
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1974, in make_response
+    rv = self.response_class.force_type(rv, request.environ)
+  File "E:\my_virtualenv\flask\lib\site-packages\werkzeug\wrappers\base_response.py", line 269, in force_type
+    response = BaseResponse(*_run_wsgi_app(response, environ))
+  File "E:\my_virtualenv\flask\lib\site-packages\werkzeug\wrappers\base_response.py", line 26, in _run_wsgi_app
+    return _run_wsgi_app(*args)
+  File "E:\my_virtualenv\flask\lib\site-packages\werkzeug\test.py", line 1119, in run_wsgi_app
+    app_rv = app(environ, start_response)
+TypeError: 'dict' object is not callable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1816, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1831, in finalize_request
+    response = self.make_response(rv)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1982, in make_response
+    reraise(TypeError, new_error, sys.exc_info()[2])
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\_compat.py", line 34, in reraise
+    raise value.with_traceback(tb)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1974, in make_response
+    rv = self.response_class.force_type(rv, request.environ)
+  File "E:\my_virtualenv\flask\lib\site-packages\werkzeug\wrappers\base_response.py", line 269, in force_type
+    response = BaseResponse(*_run_wsgi_app(response, environ))
+  File "E:\my_virtualenv\flask\lib\site-packages\werkzeug\wrappers\base_response.py", line 26, in _run_wsgi_app
+    return _run_wsgi_app(*args)
+  File "E:\my_virtualenv\flask\lib\site-packages\werkzeug\test.py", line 1119, in run_wsgi_app
+    app_rv = app(environ, start_response)
+TypeError: 'dict' object is not callable
+The view function did not return a valid response. The return type must be a string, tuple, Response instance, or WSGI callable, but it was a dict.
+2020-01-13 14:56:59,348 flask.app ERROR  1761 Exception on /test [GET] 
+Traceback (most recent call last):
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1974, in make_response
+    rv = self.response_class.force_type(rv, request.environ)
+  File "E:\my_virtualenv\flask\lib\site-packages\werkzeug\wrappers\base_response.py", line 269, in force_type
+    response = BaseResponse(*_run_wsgi_app(response, environ))
+  File "E:\my_virtualenv\flask\lib\site-packages\werkzeug\test.py", line 1119, in run_wsgi_app
+    app_rv = app(environ, start_response)
+TypeError: 'dict' object is not callable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1816, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1831, in finalize_request
+    response = self.make_response(rv)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1982, in make_response
+    reraise(TypeError, new_error, sys.exc_info()[2])
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\_compat.py", line 34, in reraise
+    raise value.with_traceback(tb)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1974, in make_response
+    rv = self.response_class.force_type(rv, request.environ)
+  File "E:\my_virtualenv\flask\lib\site-packages\werkzeug\wrappers\base_response.py", line 269, in force_type
+    response = BaseResponse(*_run_wsgi_app(response, environ))
+  File "E:\my_virtualenv\flask\lib\site-packages\werkzeug\test.py", line 1119, in run_wsgi_app
+    app_rv = app(environ, start_response)
+TypeError: 'dict' object is not callable
+The view function did not return a valid response. The return type must be a string, tuple, Response instance, or WSGI callable, but it was a dict.
+2020-01-13 15:12:26,100 flask.app ERROR  44 errormessage 
+2020-01-13 15:14:03,496 flask.app ERROR  44 errormessage 
+2020-01-13 15:14:29,845 flask.app ERROR  44 errormessage 
+2020-01-13 15:15:43,954 flask.app ERROR  44 errormessage 
+2020-01-13 15:16:51,408 flask.app ERROR  44 errormessage 
+2020-01-13 15:17:29,252 flask.app ERROR  44 errormessage 
+2020-01-13 15:17:35,349 flask.app ERROR  44 errormessage 
+2020-01-13 15:17:42,156 flask.app ERROR  44 errormessage 
+2020-01-13 15:17:44,335 flask.app ERROR  44 errormessage 
+2020-01-13 15:17:50,960 flask.app ERROR  44 errormessage 
+2020-01-13 15:17:51,963 flask.app ERROR  44 errormessage 
+2020-01-13 15:17:53,495 flask.app ERROR  44 errormessage 
+2020-01-13 15:17:55,017 flask.app ERROR  44 errormessage 
+2020-01-13 15:17:55,766 flask.app ERROR  44 errormessage 
+2020-01-13 15:17:56,609 flask.app ERROR  44 errormessage 
+2020-01-13 15:17:57,847 flask.app ERROR  44 errormessage 
+2020-01-13 15:17:59,430 flask.app ERROR  44 errormessage 
+2020-01-13 15:18:00,545 flask.app ERROR  44 errormessage 
+2020-01-13 15:18:24,891 flask.app ERROR  44 errormessage 
+2020-01-13 15:21:18,376 flask.app ERROR  44 errormessage 
+2020-01-13 15:22:45,837 flask.app ERROR  44 errormessage 
+2020-01-13 15:23:22,649 flask.app ERROR  44 errormessage 
+2020-01-13 15:23:26,886 flask.app ERROR  44 errormessage 
+2020-01-13 15:23:34,537 flask.app ERROR  44 errormessage 
+2020-01-13 15:24:31,998 flask.app ERROR  44 errormessage 
+2020-01-13 15:24:33,751 flask.app ERROR  44 errormessage 
+2020-01-13 15:24:35,938 flask.app ERROR  44 errormessage 
+2020-01-13 15:27:46,255 flask.app ERROR  1761 Exception on /test [GET] 
+Traceback (most recent call last):
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_restful\__init__.py", line 269, in error_router
+    return original_handler(e)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_cors\extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Administrator\Desktop\work\code\nanhu\app\resources\user\test.py", line 8, in my_test
+    return json.dumps(dict)
+  File "d:\appdata\local\programs\python\python36\Lib\json\__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "d:\appdata\local\programs\python\python36\Lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "d:\appdata\local\programs\python\python36\Lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "d:\appdata\local\programs\python\python36\Lib\json\encoder.py", line 180, in default
+    o.__class__.__name__)
+TypeError: Object of type 'type' is not JSON serializable
+2020-01-13 15:28:04,437 flask.app ERROR  44 errormessage 
+2020-01-13 15:30:45,661 flask.app ERROR  44 errormessage 
+2020-01-13 15:31:08,820 flask.app ERROR  44 errormessage 
+2020-01-13 15:32:49,599 flask.app ERROR  44 errormessage 
+2020-01-13 15:32:51,332 flask.app ERROR  44 errormessage 
+2020-01-13 15:34:06,917 flask.app ERROR  44 errormessage 
+2020-01-13 15:34:08,964 flask.app ERROR  44 errormessage 
+2020-01-13 15:35:00,762 flask.app ERROR  44 errormessage 
+2020-01-13 15:35:09,978 flask.app ERROR  44 errormessage 
+2020-01-13 15:35:29,360 flask.app ERROR  45 errormessage 
+2020-01-13 15:35:40,935 flask.app ERROR  45 errormessage 
+2020-01-13 15:35:51,104 flask.app ERROR  45 errormessage 
+2020-01-13 15:36:08,020 flask.app ERROR  45 errormessage 
+2020-01-13 15:37:05,937 flask.app ERROR  45 errormessage 
+2020-01-13 15:37:09,675 flask.app ERROR  45 errormessage 
+2020-01-13 15:38:37,431 flask.app ERROR  45 errormessage 
+2020-01-13 15:39:41,016 flask.app ERROR  45 errormessage 
+2020-01-13 15:41:19,951 flask.app ERROR  45 errormessage 
+2020-01-13 15:41:22,540 flask.app ERROR  45 errormessage 
+2020-01-13 15:41:23,863 flask.app ERROR  45 errormessage 
+2020-01-13 15:41:54,981 flask.app ERROR  45 errormessage 
+2020-01-13 15:42:47,972 flask.app ERROR  45 errormessage 
+2020-01-13 15:43:49,922 flask.app ERROR  45 errormessage 
+2020-01-13 15:50:52,073 flask.app ERROR  45 errormessage 
+2020-01-13 15:51:44,086 flask.app ERROR  45 errormessage 
+2020-01-13 15:53:22,642 flask.app ERROR  45 errormessage 
+2020-01-13 16:01:49,081 flask.app ERROR  45 errormessage 
+2020-01-13 16:03:24,621 flask.app ERROR  45 errormessage 
+2020-01-13 16:04:00,154 flask.app ERROR  45 errormessage 
+2020-01-13 16:05:06,187 flask.app ERROR  45 errormessage 
+2020-01-13 16:06:01,228 flask.app ERROR  45 errormessage 
+2020-01-13 16:06:53,152 flask.app ERROR  45 errormessage 
+2020-01-13 16:08:30,052 flask.app ERROR  45 errormessage 
+2020-01-13 16:09:31,884 flask.app ERROR  45 errormessage 
+2020-01-13 16:10:24,663 flask.app ERROR  45 errormessage 
+2020-01-13 16:13:28,907 flask.app ERROR  45 errormessage 
+2020-01-13 16:17:12,533 flask.app ERROR  45 errormessage 
+2020-01-13 16:18:15,461 flask.app ERROR  45 errormessage 
+2020-01-13 16:26:21,712 flask.app ERROR  45 errormessage 
+2020-01-13 16:26:43,403 flask.app ERROR  45 errormessage 
+2020-01-13 16:33:02,647 flask.app ERROR  45 errormessage 
+2020-01-13 16:33:29,988 flask.app ERROR  45 errormessage 
+2020-01-13 16:35:31,392 flask.app ERROR  45 errormessage 
+2020-01-13 16:36:41,629 flask.app ERROR  45 errormessage 
+2020-01-13 16:44:30,794 flask.app ERROR  45 errormessage 
+2020-01-13 16:48:53,487 flask.app ERROR  45 errormessage 
+2020-01-13 16:50:11,410 flask.app ERROR  45 errormessage 
+2020-01-13 16:55:05,100 flask.app ERROR  45 errormessage 
+2020-01-13 17:05:00,747 flask.app ERROR  45 errormessage 
+2020-01-13 17:07:25,837 flask.app ERROR  45 errormessage 
+2020-01-13 18:35:52,953 flask.app ERROR  45 errormessage 
+2020-01-13 18:44:15,165 flask.app ERROR  45 errormessage 
+2020-01-13 18:44:47,111 flask.app ERROR  45 errormessage 
+2020-01-13 18:45:36,570 flask.app ERROR  45 errormessage 
+2020-01-13 18:48:35,939 flask.app ERROR  45 errormessage 
+2020-01-13 18:49:59,305 flask.app ERROR  45 errormessage 
+2020-01-13 18:50:46,623 flask.app ERROR  45 errormessage 
+2020-01-13 18:53:54,299 flask.app ERROR  45 errormessage 
+2020-01-13 18:55:03,392 flask.app ERROR  45 errormessage 
+2020-01-13 19:01:42,664 flask.app ERROR  45 errormessage 
+2020-01-13 19:03:46,506 flask.app ERROR  45 errormessage 
+2020-01-13 19:04:18,318 flask.app ERROR  45 errormessage 
+2020-01-13 19:05:33,620 flask.app ERROR  45 errormessage 
+2020-01-13 19:05:57,336 flask.app ERROR  45 errormessage 
+2020-01-13 19:06:47,748 flask.app ERROR  45 errormessage 
+2020-01-13 19:08:48,607 flask.app ERROR  45 errormessage 
+2020-01-13 19:14:37,490 flask.app ERROR  45 errormessage 
+2020-01-13 19:32:47,485 flask.app ERROR  45 errormessage 
+2020-01-13 19:36:41,741 flask.app ERROR  45 errormessage 
+2020-01-13 19:36:43,075 flask.app ERROR  45 errormessage 
+2020-01-13 19:40:58,661 flask.app ERROR  45 errormessage 
+2020-01-13 19:41:36,107 flask.app ERROR  45 errormessage 
+2020-01-13 19:41:51,783 flask.app ERROR  45 errormessage 
+2020-01-13 19:42:50,135 flask.app ERROR  45 errormessage 
+2020-01-13 19:43:27,244 flask.app ERROR  45 errormessage 
+2020-01-13 19:44:56,170 flask.app ERROR  45 errormessage 
+2020-01-13 19:48:59,724 flask.app ERROR  45 errormessage 
+2020-01-13 19:49:37,301 flask.app ERROR  45 errormessage 
+2020-01-13 19:50:29,575 flask.app ERROR  45 errormessage 
+2020-01-13 19:51:31,396 flask.app ERROR  45 errormessage 
+2020-01-13 19:52:11,504 flask.app ERROR  45 errormessage 
+2020-01-13 19:52:28,325 flask.app ERROR  45 errormessage 
+2020-01-13 19:52:48,253 flask.app ERROR  45 errormessage 
+2020-01-13 19:55:00,706 flask.app ERROR  45 errormessage 
+2020-01-13 19:55:21,862 flask.app ERROR  45 errormessage 
+2020-01-13 19:56:17,145 flask.app ERROR  45 errormessage 
+2020-01-13 19:57:37,680 flask.app ERROR  45 errormessage 
+2020-01-13 19:57:52,690 flask.app ERROR  45 errormessage 
+2020-01-13 20:01:28,551 flask.app ERROR  45 errormessage 
+2020-01-13 20:04:56,922 flask.app ERROR  45 errormessage 
+2020-01-13 20:05:32,250 flask.app ERROR  45 errormessage 
+2020-01-13 20:06:36,192 flask.app ERROR  45 errormessage 
+2020-01-13 20:07:13,317 flask.app ERROR  45 errormessage 
+2020-01-13 20:08:42,546 flask.app ERROR  45 errormessage 
+2020-01-13 20:09:38,727 flask.app ERROR  45 errormessage 
+2020-01-13 20:10:13,855 flask.app ERROR  45 errormessage 
+2020-01-13 20:11:30,211 flask.app ERROR  45 errormessage 
+2020-01-13 20:12:37,609 flask.app ERROR  45 errormessage 
+2020-01-13 20:13:11,040 flask.app ERROR  45 errormessage 
+2020-01-13 20:13:41,424 flask.app ERROR  45 errormessage 
+2020-01-13 20:15:05,653 flask.app ERROR  45 errormessage 
+2020-01-13 20:15:43,806 flask.app ERROR  45 errormessage 
+2020-01-13 20:16:16,293 flask.app ERROR  45 errormessage 
+2020-01-13 20:17:55,619 flask.app ERROR  45 errormessage 
+2020-01-13 20:19:22,278 flask.app ERROR  45 errormessage 
+2020-01-13 20:21:42,046 flask.app ERROR  45 errormessage 
+2020-01-13 20:25:04,624 flask.app ERROR  45 errormessage 
+2020-01-13 20:29:06,270 flask.app ERROR  45 errormessage 
+2020-01-13 20:36:09,377 flask.app ERROR  45 errormessage 

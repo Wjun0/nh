@@ -16,3 +16,5 @@ user_api.representation('application/json')(output_json)
 # 添加类视图
 user_api.add_resource(ChatResource,'/api/chat')
 user_api.add_resource(HistoryResource,'/history')
+
+from . import test

@@ -18,6 +18,7 @@ def create_flask_app(config_type):
     # 创建应用
     app = Flask(__name__)
 
+    #跨域解决
     from flask_cors import CORS
     CORS(app,resources=r'/*')
 
@@ -57,6 +58,7 @@ def create_app(config_type):
     register_extensions(app)
 
     # 添加日志
+    app.config['PROPAGATE_EXCEPTIONS'] = False      #设置传播异常
     from utils.log import create_logger
     create_logger(app)
 
