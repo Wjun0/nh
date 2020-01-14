@@ -260,3 +260,780 @@ TypeError: Object of type 'type' is not JSON serializable
 2020-01-13 20:25:04,624 flask.app ERROR  45 errormessage 
 2020-01-13 20:29:06,270 flask.app ERROR  45 errormessage 
 2020-01-13 20:36:09,377 flask.app ERROR  45 errormessage 
+2020-01-14 09:56:21,172 flask.app ERROR  30 'ascii' codec can't encode characters in position 11-17: ordinal not in range(128) 
+2020-01-14 10:04:16,974 flask.app ERROR  30 'ascii' codec can't encode characters in position 11-17: ordinal not in range(128) 
+2020-01-14 10:04:49,348 flask.app ERROR  30 'ascii' codec can't encode characters in position 11-14: ordinal not in range(128) 
+2020-01-14 10:06:15,438 flask.app ERROR  30 'ascii' codec can't encode characters in position 11-17: ordinal not in range(128) 
+2020-01-14 10:25:14,842 flask.app ERROR  1761 Exception on /api/chat [POST] 
+Traceback (most recent call last):
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_restful\__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_restful\__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "C:\Users\Administrator\Desktop\work\code\nanhu\app\resources\user\chat.py", line 70, in post
+    save_result_to_redis()
+TypeError: save_result_to_redis() missing 2 required positional arguments: 'result' and 'session_id'
+2020-01-14 10:25:33,885 flask.app ERROR  1761 Exception on /api/chat [POST] 
+Traceback (most recent call last):
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_restful\__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_restful\__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "C:\Users\Administrator\Desktop\work\code\nanhu\app\resources\user\chat.py", line 70, in post
+    save_result_to_redis()
+TypeError: save_result_to_redis() missing 2 required positional arguments: 'result' and 'session_id'
+2020-01-14 10:43:09,767 flask.app ERROR  1761 Exception on /history [POST] 
+Traceback (most recent call last):
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_restful\__init__.py", line 462, in wrapper
+    return self.make_response(data, code, headers=headers)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_restful\__init__.py", line 491, in make_response
+    resp = self.representations[mediatype](data, *args, **kwargs)
+  File "C:\Users\Administrator\Desktop\work\code\nanhu/common\utils\output.py", line 25, in output_json
+    dumped = dumps(data, **settings) + "\n"
+  File "d:\appdata\local\programs\python\python36\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "d:\appdata\local\programs\python\python36\Lib\json\encoder.py", line 201, in encode
+    chunks = list(chunks)
+  File "d:\appdata\local\programs\python\python36\Lib\json\encoder.py", line 430, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "d:\appdata\local\programs\python\python36\Lib\json\encoder.py", line 404, in _iterencode_dict
+    yield from chunks
+  File "d:\appdata\local\programs\python\python36\Lib\json\encoder.py", line 437, in _iterencode
+    o = _default(o)
+  File "d:\appdata\local\programs\python\python36\Lib\json\encoder.py", line 180, in default
+    o.__class__.__name__)
+TypeError: Object of type 'BaseQuery' is not JSON serializable
+2020-01-14 10:53:37,452 flask.app ERROR  1761 Exception on /history [POST] 
+Traceback (most recent call last):
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_restful\__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_restful\__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "C:\Users\Administrator\Desktop\work\code\nanhu\app\resources\user\chat.py", line 134, in post
+    start_time = time.strftime('%Y-%m-%d %H:%M:%S',start)
+TypeError: Tuple or struct_time argument required
+2020-01-14 10:58:43,966 flask.app ERROR  1761 Exception on /history [POST] 
+Traceback (most recent call last):
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_restful\__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_restful\__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "C:\Users\Administrator\Desktop\work\code\nanhu\app\resources\user\chat.py", line 134, in post
+    start_time = time.strptime(start,'%Y-%m-%d %H:%M:%S')
+  File "d:\appdata\local\programs\python\python36\Lib\_strptime.py", line 559, in _strptime_time
+    tt = _strptime(data_string, format)[0]
+  File "d:\appdata\local\programs\python\python36\Lib\_strptime.py", line 362, in _strptime
+    (data_string, format))
+ValueError: time data '2020-01-13' does not match format '%Y-%m-%d %H:%M:%S'
+2020-01-14 11:07:31,203 flask.app ERROR  1761 Exception on /history [POST] 
+Traceback (most recent call last):
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_restful\__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_restful\__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "C:\Users\Administrator\Desktop\work\code\nanhu\app\resources\user\chat.py", line 135, in post
+    end_time = time.strftime('%Y-%m-%d %H:%M:%S',end + datetime.timedelta(1))
+TypeError: must be str, not datetime.timedelta
+2020-01-14 11:07:33,441 flask.app ERROR  1761 Exception on /history [POST] 
+Traceback (most recent call last):
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_restful\__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_restful\__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "C:\Users\Administrator\Desktop\work\code\nanhu\app\resources\user\chat.py", line 135, in post
+    end_time = time.strftime('%Y-%m-%d %H:%M:%S',end + datetime.timedelta(1))
+TypeError: must be str, not datetime.timedelta
+2020-01-14 11:08:50,817 flask.app ERROR  1761 Exception on /history [POST] 
+Traceback (most recent call last):
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_restful\__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_restful\__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "C:\Users\Administrator\Desktop\work\code\nanhu\app\resources\user\chat.py", line 135, in post
+    end = end + datetime.timedelta(1)
+TypeError: must be str, not datetime.timedelta
+2020-01-14 11:18:28,442 flask.app ERROR  1761 Exception on /history [POST] 
+Traceback (most recent call last):
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_restful\__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_restful\__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "C:\Users\Administrator\Desktop\work\code\nanhu\app\resources\user\chat.py", line 134, in post
+    start_time = time.strptime(start,'%Y-%m-%d %H:%M:%S')
+  File "d:\appdata\local\programs\python\python36\Lib\_strptime.py", line 559, in _strptime_time
+    tt = _strptime(data_string, format)[0]
+  File "d:\appdata\local\programs\python\python36\Lib\_strptime.py", line 362, in _strptime
+    (data_string, format))
+ValueError: time data '2020-01-13' does not match format '%Y-%m-%d %H:%M:%S'
+2020-01-14 11:18:47,672 flask.app ERROR  1761 Exception on /history [POST] 
+Traceback (most recent call last):
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_restful\__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_restful\__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "C:\Users\Administrator\Desktop\work\code\nanhu\app\resources\user\chat.py", line 136, in post
+    end = datetime.datetime.strftime(end,'%Y-%m-%d %H:%M:%S')
+TypeError: descriptor 'strftime' requires a 'datetime.date' object but received a 'str'
+2020-01-14 13:11:15,314 flask.app ERROR  1761 Exception on /history [POST] 
+Traceback (most recent call last):
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_restful\__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_restful\__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "C:\Users\Administrator\Desktop\work\code\nanhu\app\resources\user\chat.py", line 136, in post
+    end = datetime.datetime.strftime(end,'%Y-%m-%d')
+TypeError: descriptor 'strftime' requires a 'datetime.date' object but received a 'str'
+2020-01-14 13:13:16,311 flask.app ERROR  1761 Exception on /history [POST] 
+Traceback (most recent call last):
+  File "E:\my_virtualenv\flask\lib\site-packages\sqlalchemy\engine\base.py", line 1246, in _execute_context
+    cursor, statement, parameters, context
+  File "E:\my_virtualenv\flask\lib\site-packages\sqlalchemy\engine\default.py", line 581, in do_execute
+    cursor.execute(statement, parameters)
+  File "E:\my_virtualenv\flask\lib\site-packages\MySQLdb\cursors.py", line 209, in execute
+    res = self._query(query)
+  File "E:\my_virtualenv\flask\lib\site-packages\MySQLdb\cursors.py", line 315, in _query
+    db.query(q)
+  File "E:\my_virtualenv\flask\lib\site-packages\MySQLdb\connections.py", line 231, in query
+    _mysql.connection.query(self, query)
+MySQLdb._exceptions.OperationalError: (1241, 'Operand should contain 1 column(s)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_restful\__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_restful\__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "C:\Users\Administrator\Desktop\work\code\nanhu\app\resources\user\chat.py", line 143, in post
+    for i in result:
+  File "E:\my_virtualenv\flask\lib\site-packages\sqlalchemy\orm\query.py", line 3367, in __iter__
+    return self._execute_and_instances(context)
+  File "E:\my_virtualenv\flask\lib\site-packages\sqlalchemy\orm\query.py", line 3392, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "E:\my_virtualenv\flask\lib\site-packages\sqlalchemy\engine\base.py", line 982, in execute
+    return meth(self, multiparams, params)
+  File "E:\my_virtualenv\flask\lib\site-packages\sqlalchemy\sql\elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "E:\my_virtualenv\flask\lib\site-packages\sqlalchemy\engine\base.py", line 1101, in _execute_clauseelement
+    distilled_params,
+  File "E:\my_virtualenv\flask\lib\site-packages\sqlalchemy\engine\base.py", line 1250, in _execute_context
+    e, statement, parameters, cursor, context
+  File "E:\my_virtualenv\flask\lib\site-packages\sqlalchemy\engine\base.py", line 1476, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "E:\my_virtualenv\flask\lib\site-packages\sqlalchemy\util\compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "E:\my_virtualenv\flask\lib\site-packages\sqlalchemy\util\compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "E:\my_virtualenv\flask\lib\site-packages\sqlalchemy\engine\base.py", line 1246, in _execute_context
+    cursor, statement, parameters, context
+  File "E:\my_virtualenv\flask\lib\site-packages\sqlalchemy\engine\default.py", line 581, in do_execute
+    cursor.execute(statement, parameters)
+  File "E:\my_virtualenv\flask\lib\site-packages\MySQLdb\cursors.py", line 209, in execute
+    res = self._query(query)
+  File "E:\my_virtualenv\flask\lib\site-packages\MySQLdb\cursors.py", line 315, in _query
+    db.query(q)
+  File "E:\my_virtualenv\flask\lib\site-packages\MySQLdb\connections.py", line 231, in query
+    _mysql.connection.query(self, query)
+sqlalchemy.exc.OperationalError: (MySQLdb._exceptions.OperationalError) (1241, 'Operand should contain 1 column(s)')
+[SQL: SELECT historical_dialogue_table.id AS historical_dialogue_table_id, historical_dialogue_table.time AS historical_dialogue_table_time, historical_dialogue_table.session_id AS historical_dialogue_table_session_id, historical_dialogue_table.username AS historical_dialogue_table_username, historical_dialogue_table.data AS historical_dialogue_table_data, historical_dialogue_table.question AS historical_dialogue_table_question 
+FROM historical_dialogue_table 
+WHERE historical_dialogue_table.time BETWEEN %s AND %s]
+[parameters: (time.struct_time(tm_year=2020, tm_mon=1, tm_mday=13, tm_hour=0, tm_min=0, tm_sec=0, tm_wday=0, tm_yday=13, tm_isdst=-1), datetime.datetime(2020, 1, 15, 0, 0))]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+2020-01-14 13:14:33,113 flask.app ERROR  1761 Exception on /history [POST] 
+Traceback (most recent call last):
+  File "E:\my_virtualenv\flask\lib\site-packages\sqlalchemy\engine\base.py", line 1246, in _execute_context
+    cursor, statement, parameters, context
+  File "E:\my_virtualenv\flask\lib\site-packages\sqlalchemy\engine\default.py", line 581, in do_execute
+    cursor.execute(statement, parameters)
+  File "E:\my_virtualenv\flask\lib\site-packages\MySQLdb\cursors.py", line 209, in execute
+    res = self._query(query)
+  File "E:\my_virtualenv\flask\lib\site-packages\MySQLdb\cursors.py", line 315, in _query
+    db.query(q)
+  File "E:\my_virtualenv\flask\lib\site-packages\MySQLdb\connections.py", line 231, in query
+    _mysql.connection.query(self, query)
+MySQLdb._exceptions.OperationalError: (1241, 'Operand should contain 1 column(s)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_restful\__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_restful\__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "C:\Users\Administrator\Desktop\work\code\nanhu\app\resources\user\chat.py", line 143, in post
+    for i in result:
+  File "E:\my_virtualenv\flask\lib\site-packages\sqlalchemy\orm\query.py", line 3367, in __iter__
+    return self._execute_and_instances(context)
+  File "E:\my_virtualenv\flask\lib\site-packages\sqlalchemy\orm\query.py", line 3392, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "E:\my_virtualenv\flask\lib\site-packages\sqlalchemy\engine\base.py", line 982, in execute
+    return meth(self, multiparams, params)
+  File "E:\my_virtualenv\flask\lib\site-packages\sqlalchemy\sql\elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "E:\my_virtualenv\flask\lib\site-packages\sqlalchemy\engine\base.py", line 1101, in _execute_clauseelement
+    distilled_params,
+  File "E:\my_virtualenv\flask\lib\site-packages\sqlalchemy\engine\base.py", line 1250, in _execute_context
+    e, statement, parameters, cursor, context
+  File "E:\my_virtualenv\flask\lib\site-packages\sqlalchemy\engine\base.py", line 1476, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "E:\my_virtualenv\flask\lib\site-packages\sqlalchemy\util\compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "E:\my_virtualenv\flask\lib\site-packages\sqlalchemy\util\compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "E:\my_virtualenv\flask\lib\site-packages\sqlalchemy\engine\base.py", line 1246, in _execute_context
+    cursor, statement, parameters, context
+  File "E:\my_virtualenv\flask\lib\site-packages\sqlalchemy\engine\default.py", line 581, in do_execute
+    cursor.execute(statement, parameters)
+  File "E:\my_virtualenv\flask\lib\site-packages\MySQLdb\cursors.py", line 209, in execute
+    res = self._query(query)
+  File "E:\my_virtualenv\flask\lib\site-packages\MySQLdb\cursors.py", line 315, in _query
+    db.query(q)
+  File "E:\my_virtualenv\flask\lib\site-packages\MySQLdb\connections.py", line 231, in query
+    _mysql.connection.query(self, query)
+sqlalchemy.exc.OperationalError: (MySQLdb._exceptions.OperationalError) (1241, 'Operand should contain 1 column(s)')
+[SQL: SELECT historical_dialogue_table.id AS historical_dialogue_table_id, historical_dialogue_table.time AS historical_dialogue_table_time, historical_dialogue_table.session_id AS historical_dialogue_table_session_id, historical_dialogue_table.username AS historical_dialogue_table_username, historical_dialogue_table.data AS historical_dialogue_table_data, historical_dialogue_table.question AS historical_dialogue_table_question 
+FROM historical_dialogue_table 
+WHERE historical_dialogue_table.time BETWEEN %s AND %s]
+[parameters: (time.struct_time(tm_year=2020, tm_mon=1, tm_mday=13, tm_hour=0, tm_min=0, tm_sec=0, tm_wday=0, tm_yday=13, tm_isdst=-1), datetime.datetime(2020, 1, 15, 0, 0))]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+2020-01-14 13:21:01,734 flask.app ERROR  1761 Exception on /history [POST] 
+Traceback (most recent call last):
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_restful\__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_restful\__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "C:\Users\Administrator\Desktop\work\code\nanhu\app\resources\user\chat.py", line 138, in post
+    end_time = end + datetime.timedelta(days=1)
+TypeError: can only concatenate tuple (not "datetime.timedelta") to tuple
+2020-01-14 13:27:17,462 flask.app ERROR  1761 Exception on /history [POST] 
+Traceback (most recent call last):
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_restful\__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_restful\__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "C:\Users\Administrator\Desktop\work\code\nanhu\app\resources\user\chat.py", line 134, in post
+    start_time = datetime.datetime.strptime(start,'%Y-%m-%d')
+  File "d:\appdata\local\programs\python\python36\Lib\_strptime.py", line 565, in _strptime_datetime
+    tt, fraction = _strptime(data_string, format)
+  File "d:\appdata\local\programs\python\python36\Lib\_strptime.py", line 365, in _strptime
+    data_string[found.end():])
+ValueError: unconverted data remains:  10:12:12
+2020-01-14 13:33:47,125 flask.app ERROR  1761 Exception on /history [POST] 
+Traceback (most recent call last):
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_restful\__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_restful\__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "C:\Users\Administrator\Desktop\work\code\nanhu\app\resources\user\chat.py", line 134, in post
+    start_time = datetime.datetime.strptime(start,'%Y-%m-%d %H:%M:%S')
+  File "d:\appdata\local\programs\python\python36\Lib\_strptime.py", line 565, in _strptime_datetime
+    tt, fraction = _strptime(data_string, format)
+  File "d:\appdata\local\programs\python\python36\Lib\_strptime.py", line 362, in _strptime
+    (data_string, format))
+ValueError: time data '2020-01-13' does not match format '%Y-%m-%d %H:%M:%S'
+2020-01-14 14:01:28,379 flask.app ERROR  1761 Exception on /history [POST] 
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\work\code\nanhu\app\resources\user\chat.py", line 51, in handle_time
+    start_time = datetime.datetime.strptime(start, '%Y-%m-%d %H:%M:%S')
+  File "d:\appdata\local\programs\python\python36\Lib\_strptime.py", line 565, in _strptime_datetime
+    tt, fraction = _strptime(data_string, format)
+  File "d:\appdata\local\programs\python\python36\Lib\_strptime.py", line 362, in _strptime
+    (data_string, format))
+ValueError: time data '2020-01-13 10:10' does not match format '%Y-%m-%d %H:%M:%S'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_restful\__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_restful\__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "C:\Users\Administrator\Desktop\work\code\nanhu\app\resources\user\chat.py", line 151, in post
+    start_time,end_time = handle_time(start,end)
+  File "C:\Users\Administrator\Desktop\work\code\nanhu\app\resources\user\chat.py", line 53, in handle_time
+    start_time = datetime.datetime.strptime(start, '%Y-%m-%d')
+  File "d:\appdata\local\programs\python\python36\Lib\_strptime.py", line 565, in _strptime_datetime
+    tt, fraction = _strptime(data_string, format)
+  File "d:\appdata\local\programs\python\python36\Lib\_strptime.py", line 365, in _strptime
+    data_string[found.end():])
+ValueError: unconverted data remains:  10:10
+2020-01-14 14:19:49,756 flask.app ERROR  55 time data '2020-01-13 10:10' does not match format '%Y-%m-%d %H:%M:%S' 
+2020-01-14 14:19:49,756 flask.app ERROR  55 time data '2020-01-13 10:10' does not match format '%Y-%m-%d %H:%M:%S' 
+2020-01-14 14:21:24,226 flask.app ERROR  55 time data '2020-01-13 10:12' does not match format '%Y-%m-%d %H:%M:%S' 
+2020-01-14 14:21:24,226 flask.app ERROR  55 time data '2020-01-13 10:12' does not match format '%Y-%m-%d %H:%M:%S' 
+2020-01-14 14:23:37,153 flask.app ERROR  67 time data '2020-01-13 10:1' does not match format '%Y-%m-%d %H:%M:%S' 
+2020-01-14 14:25:50,129 flask.app ERROR  67 time data '2020-01-13 10:1' does not match format '%Y-%m-%d %H:%M:%S' 
+2020-01-14 14:32:39,659 flask.app ERROR  67 time data '2020-01-13 10:1' does not match format '%Y-%m-%d %H:%M:%S' 
+2020-01-14 14:33:48,006 flask.app ERROR  67 time data '2020-01-13 10:1' does not match format '%Y-%m-%d %H:%M:%S' 
+2020-01-14 14:33:48,466 flask.app ERROR  1761 Exception on /history [POST] 
+Traceback (most recent call last):
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_restful\__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_restful\__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "C:\Users\Administrator\Desktop\work\code\nanhu\app\resources\user\chat.py", line 167, in post
+    start_time,end_time = handle_time(start,end)
+ValueError: not enough values to unpack (expected 2, got 1)
+2020-01-14 14:41:47,512 flask.app ERROR  67 time data '2020-01-13 10:1' does not match format '%Y-%m-%d %H:%M:%S' 
+2020-01-14 14:45:42,160 flask.app ERROR  67 time data '2020-0111-13 10:1' does not match format '%Y-%m-%d %H:%M:%S' 
+2020-01-14 14:45:52,760 flask.app ERROR  74 time data '2020-0111-13' does not match format '%Y-%m-%d' 
+2020-01-14 14:45:55,277 flask.app ERROR  74 time data '2020-0111-13' does not match format '%Y-%m-%d' 
+2020-01-14 14:45:56,085 flask.app ERROR  74 time data '2020-0111-13' does not match format '%Y-%m-%d' 
+2020-01-14 14:46:18,570 flask.app ERROR  74 unconverted data remains: 2 
+2020-01-14 14:46:26,312 flask.app ERROR  60 unconverted data remains: 8 
+2020-01-14 14:49:11,601 flask.app ERROR  1761 Exception on /test [GET] 
+Traceback (most recent call last):
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_restful\__init__.py", line 269, in error_router
+    return original_handler(e)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_cors\extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Administrator\Desktop\work\code\nanhu\app\resources\user\test.py", line 14, in my_test
+    redis_client.hdel('Round0')
+  File "E:\my_virtualenv\flask\lib\site-packages\redis\client.py", line 2705, in hdel
+    return self.execute_command('HDEL', name, *keys)
+  File "E:\my_virtualenv\flask\lib\site-packages\redis\client.py", line 839, in execute_command
+    return self.parse_response(conn, command_name, **options)
+  File "E:\my_virtualenv\flask\lib\site-packages\redis\client.py", line 853, in parse_response
+    response = connection.read_response()
+  File "E:\my_virtualenv\flask\lib\site-packages\redis\connection.py", line 718, in read_response
+    raise response
+redis.exceptions.ResponseError: wrong number of arguments for 'hdel' command
+2020-01-14 15:04:51,127 flask.app ERROR  1761 Exception on /test_redis [GET] 
+Traceback (most recent call last):
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_restful\__init__.py", line 269, in error_router
+    return original_handler(e)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_cors\extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+TypeError: get() missing 1 required positional argument: 'self'
+2020-01-14 15:05:05,872 flask.app ERROR  1761 Exception on /test_redis [GET] 
+Traceback (most recent call last):
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_restful\__init__.py", line 269, in error_router
+    return original_handler(e)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_cors\extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+TypeError: get() missing 1 required positional argument: 'self'
+2020-01-14 15:05:07,910 flask.app ERROR  1761 Exception on /test_redis [GET] 
+Traceback (most recent call last):
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_restful\__init__.py", line 269, in error_router
+    return original_handler(e)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_cors\extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+TypeError: get() missing 1 required positional argument: 'self'
+2020-01-14 15:05:08,737 flask.app ERROR  1761 Exception on /test_redis [GET] 
+Traceback (most recent call last):
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_restful\__init__.py", line 269, in error_router
+    return original_handler(e)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_cors\extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+TypeError: get() missing 1 required positional argument: 'self'
+2020-01-14 15:05:09,391 flask.app ERROR  1761 Exception on /test_redis [GET] 
+Traceback (most recent call last):
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_restful\__init__.py", line 269, in error_router
+    return original_handler(e)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_cors\extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+TypeError: get() missing 1 required positional argument: 'self'
+2020-01-14 15:05:41,202 flask.app ERROR  1761 Exception on /test/redis [GET] 
+Traceback (most recent call last):
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_restful\__init__.py", line 269, in error_router
+    return original_handler(e)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_cors\extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+TypeError: get() missing 1 required positional argument: 'self'
+2020-01-14 15:06:05,799 flask.app ERROR  1761 Exception on /test/redis [GET] 
+Traceback (most recent call last):
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_restful\__init__.py", line 269, in error_router
+    return original_handler(e)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_cors\extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+TypeError: get() missing 1 required positional argument: 'self'
+2020-01-14 15:06:58,841 flask.app ERROR  1761 Exception on /test/redis [GET] 
+Traceback (most recent call last):
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1974, in make_response
+    rv = self.response_class.force_type(rv, request.environ)
+  File "E:\my_virtualenv\flask\lib\site-packages\werkzeug\wrappers\base_response.py", line 269, in force_type
+    response = BaseResponse(*_run_wsgi_app(response, environ))
+  File "E:\my_virtualenv\flask\lib\site-packages\werkzeug\wrappers\base_response.py", line 26, in _run_wsgi_app
+    return _run_wsgi_app(*args)
+  File "E:\my_virtualenv\flask\lib\site-packages\werkzeug\test.py", line 1119, in run_wsgi_app
+    app_rv = app(environ, start_response)
+TypeError: 'dict' object is not callable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1816, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1831, in finalize_request
+    response = self.make_response(rv)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1982, in make_response
+    reraise(TypeError, new_error, sys.exc_info()[2])
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\_compat.py", line 34, in reraise
+    raise value.with_traceback(tb)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1974, in make_response
+    rv = self.response_class.force_type(rv, request.environ)
+  File "E:\my_virtualenv\flask\lib\site-packages\werkzeug\wrappers\base_response.py", line 269, in force_type
+    response = BaseResponse(*_run_wsgi_app(response, environ))
+  File "E:\my_virtualenv\flask\lib\site-packages\werkzeug\wrappers\base_response.py", line 26, in _run_wsgi_app
+    return _run_wsgi_app(*args)
+  File "E:\my_virtualenv\flask\lib\site-packages\werkzeug\test.py", line 1119, in run_wsgi_app
+    app_rv = app(environ, start_response)
+TypeError: 'dict' object is not callable
+The view function did not return a valid response. The return type must be a string, tuple, Response instance, or WSGI callable, but it was a dict.
+2020-01-14 15:08:31,495 flask.app ERROR  1761 Exception on /test/redis [GET] 
+Traceback (most recent call last):
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_restful\__init__.py", line 269, in error_router
+    return original_handler(e)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_cors\extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Administrator\Desktop\work\code\nanhu\app\resources\user\test.py", line 26, in redis_test
+    return jsonify({"data":result.decode()})
+AttributeError: 'str' object has no attribute 'decode'
+2020-01-14 15:12:27,536 flask.app ERROR  1761 Exception on /test [GET] 
+Traceback (most recent call last):
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_restful\__init__.py", line 269, in error_router
+    return original_handler(e)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_cors\extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Administrator\Desktop\work\code\nanhu\app\resources\user\test.py", line 15, in my_test
+    redis_client.expire('admin02',0.01)  #设置0.01秒过期
+  File "E:\my_virtualenv\flask\lib\site-packages\redis\client.py", line 1317, in expire
+    return self.execute_command('EXPIRE', name, time)
+  File "E:\my_virtualenv\flask\lib\site-packages\redis\client.py", line 839, in execute_command
+    return self.parse_response(conn, command_name, **options)
+  File "E:\my_virtualenv\flask\lib\site-packages\redis\client.py", line 853, in parse_response
+    response = connection.read_response()
+  File "E:\my_virtualenv\flask\lib\site-packages\redis\connection.py", line 718, in read_response
+    raise response
+redis.exceptions.ResponseError: value is not an integer or out of range
+2020-01-14 15:13:38,207 flask.app ERROR  1761 Exception on /test [GET] 
+Traceback (most recent call last):
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_restful\__init__.py", line 269, in error_router
+    return original_handler(e)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_cors\extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Administrator\Desktop\work\code\nanhu\app\resources\user\test.py", line 15, in my_test
+    redis_client.expire('admin02',0.01)  #设置0.01秒过期
+  File "E:\my_virtualenv\flask\lib\site-packages\redis\client.py", line 1317, in expire
+    return self.execute_command('EXPIRE', name, time)
+  File "E:\my_virtualenv\flask\lib\site-packages\redis\client.py", line 839, in execute_command
+    return self.parse_response(conn, command_name, **options)
+  File "E:\my_virtualenv\flask\lib\site-packages\redis\client.py", line 853, in parse_response
+    response = connection.read_response()
+  File "E:\my_virtualenv\flask\lib\site-packages\redis\connection.py", line 718, in read_response
+    raise response
+redis.exceptions.ResponseError: value is not an integer or out of range
+2020-01-14 15:14:17,998 flask.app ERROR  1761 Exception on /test [GET] 
+Traceback (most recent call last):
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_restful\__init__.py", line 269, in error_router
+    return original_handler(e)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_cors\extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Administrator\Desktop\work\code\nanhu\app\resources\user\test.py", line 15, in my_test
+    redis_client.expire('admin02',0.1)  #设置0.01秒过期
+  File "E:\my_virtualenv\flask\lib\site-packages\redis\client.py", line 1317, in expire
+    return self.execute_command('EXPIRE', name, time)
+  File "E:\my_virtualenv\flask\lib\site-packages\redis\client.py", line 839, in execute_command
+    return self.parse_response(conn, command_name, **options)
+  File "E:\my_virtualenv\flask\lib\site-packages\redis\client.py", line 853, in parse_response
+    response = connection.read_response()
+  File "E:\my_virtualenv\flask\lib\site-packages\redis\connection.py", line 718, in read_response
+    raise response
+redis.exceptions.ResponseError: value is not an integer or out of range
+2020-01-14 15:20:37,204 flask.app ERROR  1761 Exception on /test/redis [GET] 
+Traceback (most recent call last):
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_restful\__init__.py", line 269, in error_router
+    return original_handler(e)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_cors\extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Administrator\Desktop\work\code\nanhu\app\resources\user\test.py", line 26, in redis_test
+    print(json.loads(result))
+  File "d:\appdata\local\programs\python\python36\Lib\json\__init__.py", line 348, in loads
+    'not {!r}'.format(s.__class__.__name__))
+TypeError: the JSON object must be str, bytes or bytearray, not 'NoneType'
+2020-01-14 15:44:32,995 flask.app ERROR  1761 Exception on /history [POST] 
+Traceback (most recent call last):
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_restful\__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "E:\my_virtualenv\flask\lib\site-packages\flask_restful\__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "C:\Users\Administrator\Desktop\work\code\nanhu\app\resources\user\chat.py", line 158, in post
+    'data':json.loads(i.data),
+  File "d:\appdata\local\programs\python\python36\Lib\json\__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "d:\appdata\local\programs\python\python36\Lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "d:\appdata\local\programs\python\python36\Lib\json\decoder.py", line 355, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
