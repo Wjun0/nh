@@ -2,6 +2,7 @@ import datetime
 import json
 import time
 
+import requests
 from flask import current_app
 from flask_restful import Resource
 from flask_restful.inputs import natural
@@ -9,7 +10,6 @@ from flask_restful.reqparse import RequestParser
 
 from models import db
 from models.history import HistoryDialogue
-from models.user import User
 from app import redis_client
 from utils.TfServer import TFserver
 
@@ -42,8 +42,7 @@ def save_result_to_redis(result,session_id):
     except Exception as e:
         current_app.logger.error(e)
 
-        return {'message': "error",
-                "data": "请求失败"}, 400
+
 
 
 def handle_time(start,end):
@@ -77,6 +76,29 @@ def handle_time(start,end):
     return start_time,end_time
 
 
+def get_keyword(question,table):
+    url = "http://49.233.73.250:8811/api/chat"
+    data = None
+    r = requests.post(url, json={'query': question, 'user': 'test', 'table':table}, verify=False)
+
+    if r.status_code == 200:
+        data = json.loads(r.text)['sql'].split('\n')[0].split(': ')[-1]
+
+    return data
+
+
+
+#获取算法的数据
+def get_data(inputdata):
+    url = "http://192.168.1.105:8081/ner/"
+    result = requests.post(url, data=json.dumps(inputdata))
+    data = {}
+    if result.status_code == 200:
+        data = json.loads(result.text)
+
+    return data
+
+
 
 class ChatResource(Resource):
     '''聊天'''
@@ -89,18 +111,29 @@ class ChatResource(Resource):
         question = args.question
         session_id = args.session_id
 
-        if session_id == "Round0":
+        if session_id == "RR":
 
             # 获取算法数据
-            query = {"query": question,
-                     "sessID": session_id,
-                     "table": None}
+            inputdata = {"sessid": 'R0',
+                         "query": question,
+                         "table": "None"}
 
-            TF = TFserver()
-            result = TF.get_result(query)
+            try:
+                result = get_data(inputdata)
+
+            except Exception as e:
+                current_app.logger.error(e)
+                return {'message': '服务未启动'}
 
             #将数据保存到redis
-            save_result_to_redis(result,session_id)
+            session_id = session_id[0] + str(1)
+
+            try:
+                save_result_to_redis(result,session_id)
+            except Exception as e:
+                current_app.logger.error(e)
+                return {'message': "error","data": "请求失败"}, 400
+
 
             # 将数据保存到mysql
             save_history_to_mysql(session_id,result,question)
@@ -113,18 +146,27 @@ class ChatResource(Resource):
             # 向redis 取出相应的问题和session_id,调用算法获取数据
             redis_data = redis_client.hget(session_id,session_id)
 
-            query = {"query": question,
-                     "sessID": session_id,
-                     "table": redis_data}
+            table = "None"
+            if redis_data:
+                table = json.loads(redis_data)
 
-            TF = TFserver()
-            result = TF.get_result(query)
+            inputdata = {"sessid": session_id,
+                         "query": question,
+                         "table": table}
 
-            session_id = result.get('sessID')
-
+            try:
+                result = get_data(inputdata)
+            except Exception as e:
+                current_app.logger.error(e)
+                return {'message': '服务未启动'}
 
             #将查询结果保存到redis
-            save_result_to_redis(result,session_id)
+            try:
+                session_id = result["sessID"]
+                save_result_to_redis(result,session_id)
+            except Exception as e:
+                current_app.logger.error(e)
+                return {'message': "error","data": "未获取到数据"}, 400
 
             #将查询结果保存到mysql
             save_history_to_mysql(session_id, result, question)

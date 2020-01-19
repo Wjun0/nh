@@ -1,6 +1,7 @@
-import json
+import json,requests
 
 from flask import jsonify
+from requests import Session, Request
 from werkzeug.security import check_password_hash
 
 from app import redis_client
@@ -25,5 +26,17 @@ def redis_test():
     redis_client.hset('Round2','test2','{name:test2}')
 
     # print(json.loads(result))
+    # data = requests.get('http://192.168.1.125:8000/test')
+    # print(json.loads(data.content.decode()))
+
+    s = Session()
+    req = Request('GET',url='http://192.168.1.125:8000/test')
+    prepped = s.prepare_request(req)
+
+    resp = s.send(prepped)
+    print(resp.status_code)
+    print(json.loads(resp.content.decode()))
 
     return jsonify({"message":'ok'})
+
+
