@@ -12,6 +12,7 @@ from settings.default import config_dict
 
 
 redis_client = None     # type:  StrictRedis
+redis_client_verify = None
 
 def create_flask_app(config_type):
     """创建Flask应用"""
@@ -37,10 +38,18 @@ def register_extensions(app):
     db.init_app(app)
 
     global redis_client
+    global redis_client_verify
+
     redis_client = StrictRedis(
         host=app.config['REDIS_HOST'],
         port=app.config['REDIS_PORT'],
         decode_responses=True)
+
+    redis_client_verify = StrictRedis(
+        host=app.config['REDIS_HOST'],
+        port=app.config['REDIS_PORT'],
+        decode_responses=True,
+        db=1)
 
 
 def register_blueprint(app:Flask):
@@ -48,6 +57,11 @@ def register_blueprint(app:Flask):
     from app.resources.user import user_chat
     app.register_blueprint(user_chat)
 
+    from app.resources.session import user_session
+    app.register_blueprint(user_session)
+
+    from app.resources.round import user_round
+    app.register_blueprint(user_round)
 
 
 def create_app(config_type):
@@ -61,6 +75,10 @@ def create_app(config_type):
     app.config['PROPAGATE_EXCEPTIONS'] = False      #设置传播异常
     from utils.log import create_logger
     create_logger(app)
+
+
+    from utils.middlewares import get_userinfo
+    app.before_request(get_userinfo)
 
     # 注册蓝图
     register_blueprint(app)

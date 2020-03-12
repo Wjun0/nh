@@ -1,0 +1,13 @@
+version: "3.6"
+services:
+  flask-web:
+    build: ..
+    ports:
+      - "8000:8000"
+    container_name: nanhu_code
+  redis:
+    image: redis
+    container_name: nanhu_redis
+  mysql:
+    image: mysql
+    container_name: nanhu_mysql

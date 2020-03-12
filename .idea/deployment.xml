@@ -2,7 +2,21 @@
 <project version="4">
   <component name="PublishConfigData">
     <serverData>
+      <paths name="nanhu2.0">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/data1/wangjun/nanhu2.0" local="$PROJECT_DIR$/../" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="python@192.168.59.129:22">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/python/nanhu2.0" local="$PROJECT_DIR$/../" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="ssh_test">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
