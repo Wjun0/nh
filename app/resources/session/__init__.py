@@ -1,7 +1,7 @@
 from flask import Blueprint
 from flask_restful import Api
 
-from app.resources.session.addsession import AddSessionResource
+from app.resources.session.addsession import AddSessionResource, DelSessionResource
 
 user_session = Blueprint('session',__name__)
 
@@ -13,3 +13,4 @@ api.representation('application/json')(output_json)
 
 
 api.add_resource(AddSessionResource,'/add/session')
+api.add_resource(DelSessionResource,'/delete/session/<sesskey>')

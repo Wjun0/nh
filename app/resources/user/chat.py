@@ -129,9 +129,14 @@ class ChatResource(Resource):
         type = args.type
         roundkey = args.roundkey
 
+
+        #如果没有roundkey则是第一次对话
         if not roundkey:
             roundkey = "R1"
 
+
+
+        # 获取算法数据
 
         name = ["张三盗窃电动⻋", "张三盗窃电动⻋", "张三盗窃电动⻋", "张三盗窃电动⻋", "张三盗窃电动⻋", "张三盗窃电动⻋", "张三盗窃电动⻋", "张三盗窃电动⻋", "张三盗窃电动⻋",
                 "张三盗窃电动⻋"]
@@ -157,6 +162,9 @@ class ChatResource(Resource):
         datasource = ["本地", "浙江省"]
         Rcondic = {"F1": "查询主类：案件", "F2": "案发时间：2020-02-19", "F3": "案件地址：南山区"}
 
+
+
+
         roundinfo = {"roundkey":roundkey,"roundID":roundkey,"Rcondic":Rcondic,"datasource":datasource}
         roundinfo_list = []
         try:
@@ -173,7 +181,6 @@ class ChatResource(Resource):
                 )
             else:
                 roundinfo_list.append(roundinfo)
-
                 data = SessionInfo(sessName = sesskey,
                                    sessID = sesskey,
                                    sessCondic = json.dumps(Rcondic),
@@ -295,6 +302,7 @@ class ChatResource(Resource):
         #     return result
 
 
+
 #今日查询
 class SearchTodayResource(Resource):
     method_decorators = [login_required]
@@ -335,24 +343,21 @@ class HistoryResource(Resource):
 
         start = args.start
         end = args.end
-
-        #时间处理
         start_time,end_time = handle_time(start,end)
-
         if start_time is None or end_time is None:
             return {'message':'error',"data":"时间格式错误"}
-
-        result = db.session.query(HistoryDialogue).filter(HistoryDialogue.time.between(start_time,end_time))
-
-        data_list = []
+        result = db.session.query(SessionInfo).filter(SessionInfo.endTime.between(start_time,end_time))
+        datalist = []
         for i in result:
-            dict = {
-                'time':str(i.time),
-                'username':i.username,
-                'data':json.loads(i.data),
-                'question':i.question,
+            dic = {
+                "sessID": i.sessID,
+                "sessName": i.sessName,
+                "sessCondic": json.loads(i.sessCondic),
+                "qtime": i.starTime.isoformat().replace('T', ' '),
+                "sesskey": i.sessKey,
+                "roundInfo": json.loads(i.roundInfo)
             }
-            data_list.append(dict)
+            datalist.append(dic)
 
-        return data_list
+        return datalist
 
