@@ -17,7 +17,7 @@ grpcio-tools==1.25.0
 idna==2.8
 itsdangerous==1.1.0
 Jinja2==2.10.3
-lxml==4.4.2
+lxml==4.6.2
 MarkupSafe==1.1.1
 monotonic==1.5
 mysqlclient==1.4.5
