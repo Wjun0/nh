@@ -4,7 +4,7 @@ cffi==1.13.2
 chardet==3.0.4
 Click==7.0
 dnspython==1.16.0
-eventlet==0.25.1
+eventlet==0.31.0
 Flask==1.0.2
 Flask-Cors==3.0.8
 Flask-RESTful==0.3.7
